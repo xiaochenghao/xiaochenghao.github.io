@@ -1,3 +1,1 @@
-# xiaochenghao.github.io
-春天的影子
-df
+This is my personal tech blog, see it at [xiaochenghao.github.io](xiaochenghao.github.io).

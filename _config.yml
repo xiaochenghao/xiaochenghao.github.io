@@ -1,0 +1,43 @@
+title: xiaochenghao.github.com | tech blog
+locale: en_US
+url: http://xiaochenghao.github.com
+markdown: kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+kramdown:
+  input: GFM
+owner:
+  name: Xiao Chenghao
+  avatar: blog.jpg
+  bio: "Java/DevOps"
+  email: xiaochenghao1989@gmail.com
+  disqus-shortname: dblockdotorg-code
+  twitter: 
+  facebook:
+  google:
+    plus:
+    analytics: UA-4756101-3
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: xiaochenghao
+  stackoverflow:
+  linkedin: 
+  instagram:
+  lastfm:
+  tumblr:
+  pinterest:
+  foursquare:
+  steam:
+  dribbble:
+  youtube:
+  soundcloud:
+paginate: 30
+google_custom_search: "015938957525977311805:c-2lieekft8"
+suggest_url: https://github.com/xiaochenghao/xiaochenghao.github.io/issues/new

@@ -1,5 +1,8 @@
---- layout: default comments: false --- {% for post in paginator.posts
-%} {% unless post.pinned %} {% unless post.next %}
+--- 
+layout: default 
+comments: false 
+--- 
+{% for post in paginator.posts%} {% unless post.pinned %} {% unless post.next %}
 <h3>{{ post.date | date: '%Y' }}</h3>
 {% else %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture
 %} {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}

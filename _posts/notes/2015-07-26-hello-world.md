@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Notes
+title: asfasdfasdf
 tags: [notes]
 comments: false
 ---

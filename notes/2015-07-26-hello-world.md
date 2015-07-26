@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Speaking
-tags: [speaking]
+title: Notes
+tags: [notes]
 comments: false
 ---
 

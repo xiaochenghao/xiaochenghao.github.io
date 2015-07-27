@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Groovy 学习1"
+title: "Groovy解析xml文件"
 date: 2015-07-27
 tags: [groovy, time]
 comments: true
 share: false
 ---
 
-###第一种方式:使用DomCategory
+###第一种方式:使用DomCategory    
 {% highlight groovy %}
 document=groovy.xml.DOMBuilder.parse(new FileReader('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml'))
 
@@ -28,7 +28,7 @@ use(groovy.xml.dom.DOMCategory) {
 
 {% endhighlight %}
 
-###第二种方式：使用XmlParser
+###第二种方式：使用XmlParser    
 {% highlight groovy %}
 languages=new XmlParser().parse('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml')
 
@@ -43,7 +43,7 @@ def languagesByAuthor={ authorName->
 println "Languages by Wirth: " +languagesByAuthor('Wirth')
 {% endhighlight %}
 
-###第三种方式:使用XmlSlurper
+###第三种方式:使用XmlSlurper    
 {% highlight groovy %}
 languages = new XmlSlurper().parse('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml')
 println "Languages and authors"
@@ -59,4 +59,4 @@ def languagesByAuthor = { authorName ->
 println "Languages by Wirth:"+languagesByAuthor('Wirth')
 {% endhighlight %}
 
-####例子xml文件
+####例子xml文件    

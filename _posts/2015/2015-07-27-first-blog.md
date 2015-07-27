@@ -60,25 +60,3 @@ println "Languages by Wirth:"+languagesByAuthor('Wirth')
 {% endhighlight %}
 
 ####例子xml文件
-{% highlight xml %}
-<languages>
-	<language name="C++">
-		<author>Stroustrup</author>
-	</language>
-	<language name="Java">
-		<author>Gosling</author>
-	</language>
-	<language name="Lisp">
-		<author>McCarthy</author>
-	</language>
-	<language name="Modula-2">
-		<author>Wirth</author>
-	</language>
-	<language name="Oberon-2">
-		<author>Wirth</author>
-	</language>
-	<language name="Pascal">
-		<author>Wirth</author>
-	</language>
-</languages>
-{% endhighlight %}

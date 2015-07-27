@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Groovy 学习"
-date: 2015-07-25
+title: "Groovy 学习1"
+date: 2015-07-27
 tags: [groovy, time]
 comments: true
 share: false

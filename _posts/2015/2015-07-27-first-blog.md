@@ -1,8 +1,29 @@
-###abc
+---
+layout: post
+title: "Groovy 学习"
+date: 2015-07-25
+tags: [groovy, time]
+comments: true
+share: false
+---
 
-* asdfasf
-* dddd
-* iiuiu
 
-[yuuo](http://localhost:8080)
+{% highlight java %}
+document=groovy.xml.DOMBuilder.parse(new FileReader('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml'))
 
+rootElement = document.documentElement
+
+use(groovy.xml.dom.DOMCategory) {
+	println "Languages and authors"
+	languages = rootElement.language
+
+	languages.each { language -> println "${language.'@name'} authored by ${language.author[0].text()}" }
+
+	def languagesByAuthor = { authorName ->
+		languages.findAll {it.author[0].text() ==authorName}.collect{ it.'@name'}.join(', ')
+	}
+	
+	println "Language by Wirth:"+languagesByAuthor('Wirth')
+}
+
+{% endhighlight %}

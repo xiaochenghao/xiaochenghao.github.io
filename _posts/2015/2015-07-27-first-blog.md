@@ -7,8 +7,8 @@ comments: true
 share: false
 ---
 
-
-{% highlight java %}
+###第一种方式:使用DomCategory
+{% highlight groovy %}
 document=groovy.xml.DOMBuilder.parse(new FileReader('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml'))
 
 rootElement = document.documentElement
@@ -26,4 +26,59 @@ use(groovy.xml.dom.DOMCategory) {
 	println "Language by Wirth:"+languagesByAuthor('Wirth')
 }
 
+{% endhighlight %}
+
+###第二种方式：使用XmlParser
+{% highlight groovy %}
+languages=new XmlParser().parse('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml')
+
+println "Languages and authors"
+
+languages.each { println "${it.@name} authored by ${it.author[0].text()}" }
+
+def languagesByAuthor={ authorName->
+	languages.findAll {it.author[0].text()==authorName}.collect{ it.@name }.join(', ')
+}
+
+println "Languages by Wirth: " +languagesByAuthor('Wirth')
+{% endhighlight %}
+
+###第三种方式:使用XmlSlurper
+{% highlight groovy %}
+languages = new XmlSlurper().parse('C:\\Users\\Administrator\\workspace\\FirstGroovyApp\\src\\language.xml')
+println "Languages and authors"
+
+languages.language.each { println "${it.@name} authored by ${it.author[0].text()}" }
+
+def languagesByAuthor = { authorName ->
+	languages.language.findAll {
+		it.author[0].text()==authorName
+	}.collect{it.@name}.join(', ')
+}
+
+println "Languages by Wirth:"+languagesByAuthor('Wirth')
+{% endhighlight %}
+
+####例子xml文件
+{% highlight xml %}
+<languages>
+	<language name="C++">
+		<author>Stroustrup</author>
+	</language>
+	<language name="Java">
+		<author>Gosling</author>
+	</language>
+	<language name="Lisp">
+		<author>McCarthy</author>
+	</language>
+	<language name="Modula-2">
+		<author>Wirth</author>
+	</language>
+	<language name="Oberon-2">
+		<author>Wirth</author>
+	</language>
+	<language name="Pascal">
+		<author>Wirth</author>
+	</language>
+</languages>
 {% endhighlight %}

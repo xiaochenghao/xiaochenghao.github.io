@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "坚定的心不会迟"
-date: 2016-03-02
+date: 2016-08-02
 tags: [悟]
 comments: true
 share: false
